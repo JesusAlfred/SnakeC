@@ -5,10 +5,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define An 60
-#define Al 30
-#define MAX 100
+#define An 60 		//Ancho del campo de juego
+#define Al 30		//Alto del campo de juego
+#define MAX 100		//Puntuacion maxima para ganar
 
+//Estructura para almacenar coordenadas
 struct XY{
 	int x;
 	int y;
@@ -16,7 +17,7 @@ struct XY{
 
 void rec(int ancho, int alto);
 int selectlevel(void);
-void setup(void);
+void setup(void);					
 void pintarCuadro(int, int, int);
 void info(int nivel, int puntos);
 
@@ -27,7 +28,7 @@ int main(void){
 	setup();
 	comida.x = 4;
 	comida.y = 5;
-	for(i=1; i<puntos; i++){
+	for(i=1; i<=puntos; i++){
 		cola[puntos-i].x=x-i*2;
 		cola[puntos-i].y=y-i;
 	}
@@ -95,6 +96,7 @@ int main(void){
 	return 0;
 }
 
+//Dibuja los margenes del juego
 void rec(int ancho, int alto){
 	int i;
 	for(i=1; i<=ancho; i++){
@@ -118,7 +120,7 @@ void rec(int ancho, int alto){
 	gotoxy(ancho,alto);
 	cprintf("%c", 217);
 }
-
+//menu para seleccionar nivel
 int selectlevel(void){
 	int nivel;
 	system("cls");
@@ -132,13 +134,13 @@ void setup(void){
 	randomize();
 	rec(An,Al);
 }
-
+//funcion para pintar un cuadrado en cierta coordenada de un determinado color
 void pintarCuadro(int x, int y, int color){
 	gotoxy(x,y);
 	textcolor(color);
 	cprintf("%c%c", 219, 219);
 }
-
+//mustra el nivel y los puntos obtenidos
 void info(int nivel, int puntos){
 	textcolor(WHITE);
 	gotoxy(An+1, 2);
