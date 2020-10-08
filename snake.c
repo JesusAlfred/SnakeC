@@ -1,5 +1,8 @@
-//Snake
-
+/*
+Snake
+Hecho por Jesús Alfredo Navarro Guzmán
+navarro.jesusalfredo@gmail.com
+*/
 #include <conio.h>
 #include <windows.h>
 #include <stdio.h>
