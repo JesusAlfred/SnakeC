@@ -1,7 +1,7 @@
 /*
 Snake
 Hecho por Jesús Alfredo Navarro Guzmán
-navarro.jesusalfredo@gmail.com
+correo: navarro.jesusalfredo@gmail.com
 */
 #include <conio.h>
 #include <windows.h>
